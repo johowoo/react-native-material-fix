@@ -1,19 +1,15 @@
-import React, {ReactNode, useEffect, useMemo, useState} from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Animated, Easing, Platform, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { Portal } from './base/PortalContext';
-import Surface, {SurfaceProps} from './Surface';
+import Surface from './Surface';
 
 export interface DialogProps {
   visible?: boolean;
 
   onDismiss?: () => void;
-
-  surfaceStyles?: SurfaceProps;
-
-  children: ReactNode;
 }
 
-const Dialog: React.FC<DialogProps> = ({ visible = false, onDismiss, surfaceStyles, children }) => {
+const Dialog: React.FC<DialogProps> = ({ visible = false, onDismiss, children }) => {
   const [portalVisible, setPortalVisible] = useState(visible);
 
   const animatedValue = useMemo(() => new Animated.Value(visible ? 1 : 0), []);
@@ -25,7 +21,7 @@ const Dialog: React.FC<DialogProps> = ({ visible = false, onDismiss, surfaceStyl
       toValue: visible ? 1 : 0,
       duration: 225,
       easing: Easing.out(Easing.cubic),
-      useNativeDriver: false,
+      useNativeDriver: Platform.OS !== 'android',
     }).start(() => {
       if (!visible) setPortalVisible(false);
     });
@@ -43,7 +39,7 @@ const Dialog: React.FC<DialogProps> = ({ visible = false, onDismiss, surfaceStyl
         pointerEvents="box-none"
         needsOffscreenAlphaCompositing={Platform.OS === 'android'}
       >
-        <Surface category="medium" elevation={24} style={[styles.surface, surfaceStyles]}>
+        <Surface category="medium" elevation={24} style={[styles.surface]}>
           {children}
         </Surface>
       </Animated.View>

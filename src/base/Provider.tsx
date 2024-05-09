@@ -1,23 +1,18 @@
 import React from 'react';
-import { Provider as WindowSizeProvider, ProviderProps as WindowSizeProviderProps } from 'react-native-window-size';
 import { SpacingFuncProvider, SpacingFuncProviderProps } from 'react-native-flex-layout';
 import { ThemeProvider, ThemeProviderProps } from './ThemeContext';
+import { WindowSizeClassProvider, WindowSizeClassProviderProps } from './WindowSizeClassContext';
 import { IconComponentProvider, IconComponentProviderProps } from './IconComponentContext';
 import { Outlet, PortalProvider } from './PortalContext';
 
-export interface ProviderProps extends ThemeProviderProps, SpacingFuncProviderProps, IconComponentProviderProps {
-  breakpoints?: WindowSizeProviderProps['breakpoints'];
-}
+export type ProviderProps = ThemeProviderProps &
+  WindowSizeClassProviderProps &
+  SpacingFuncProviderProps &
+  IconComponentProviderProps;
 
-export const Provider: React.FC<ProviderProps> = ({
-  theme,
-  breakpoints = { xs: 0, sm: 600, md: 905, lg: 1240, xl: 1440 },
-  spacingFunc,
-  IconComponent,
-  children,
-}) => (
+export const Provider: React.FC<ProviderProps> = ({ theme, windowSizes, spacingFunc, IconComponent, children }) => (
   <ThemeProvider theme={theme}>
-    <WindowSizeProvider breakpoints={breakpoints}>
+    <WindowSizeClassProvider windowSizes={windowSizes}>
       <SpacingFuncProvider spacingFunc={spacingFunc}>
         <IconComponentProvider IconComponent={IconComponent}>
           <PortalProvider>
@@ -26,6 +21,6 @@ export const Provider: React.FC<ProviderProps> = ({
           </PortalProvider>
         </IconComponentProvider>
       </SpacingFuncProvider>
-    </WindowSizeProvider>
+    </WindowSizeClassProvider>
   </ThemeProvider>
 );

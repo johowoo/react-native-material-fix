@@ -1,12 +1,4 @@
-## ⚠️ Maintenance & support
-
-I am currently unable to actively maintain this library. While I continue to use it in my projects, I am facing time constraints that prevent me from dedicating proper attention to its maintenance.
-
-Please understand that I may not be able to address issues, implement new features, or release updates at this time. However, I intend to resume maintenance as soon as I find the necessary resources.
-
----
-
-# Material UI components for React Native [![Twitter Follow](https://img.shields.io/twitter/follow/yamankatby?style=social)](https://twitter.com/intent/user?screen_name=yamankatby)
+# Material UI components for React Native [![Twitter Follow](https://img.shields.io/twitter/follow/rn_material?style=social)](https://twitter.com/intent/user?screen_name=rn_material)
 
 > React Native Material is a set of pre-built, cross-platform, highly customizable UI components that follow Material Design principles.
 
@@ -25,7 +17,7 @@ Take a look at our example apps:
 
 - [💨 Expo Snack](https://snack.expo.dev/@yamankatby/react-native-material-explorer)
 - [🤖 Android](https://play.google.com/store/apps/details?id=com.swazer.material)
-- [🌍 Web](https://example.rn-material.js.org/)
+- [🌍 Web](https://example.react-native-material.com/)
 
 ### Run the Explorer App on your device
 
@@ -64,7 +56,7 @@ import React from "react";
 import { Button } from "@react-native-material/core";
 
 export default function App() {
-  return <Button title="Button" onPress={() => alert("hi!")} />;
+  return <Button title="Button" onPress={() => alert("hi!")}/>;
 }
 ```
 
@@ -72,9 +64,9 @@ export default function App() {
 
 ### `<Appbar />`
 
-[Try it out](https://rn-material.js.org/docs/components/app-bar)
+[Try it out](https://www.react-native-material.com/docs/components/app-bar)
 
-The App bars display information and actions relating to the current screen.
+The App bars displays information and actions relating to the current screen.
 
 ![App bar](https://raw.githubusercontent.com/yamankatby/react-native-material/main/images/app-bar.png)
 
@@ -84,7 +76,7 @@ The App bars display information and actions relating to the current screen.
 
 ### `<Avatar />`
 
-[Try it out](https://rn-material.js.org/docs/components/avatar)
+[Try it out](https://www.react-native-material.com/docs/components/avatar)
 
 Avatars are found throughout material design with uses in everything from tables to dialog menus.
 
@@ -92,7 +84,7 @@ Avatars are found throughout material design with uses in everything from tables
 
 ### `<Backdrop />`
 
-[Try it out](https://rn-material.js.org/docs/components/backdrop)
+[Try it out](https://www.react-native-material.com/docs/components/backdrop)
 
 A backdrop appears behind all other surfaces in an app, displaying contextual and actionable content.
 
@@ -100,15 +92,15 @@ A backdrop appears behind all other surfaces in an app, displaying contextual an
 
 ### `<Badge />`
 
-[Try it out](https://rn-material.js.org/docs/components/badge)
+[Try it out](https://www.react-native-material.com/docs/components/badge)
 
-A Badge represents dynamic information such as several pending requests in a Bottom Navigation or Tab Bar.
+A Badge represents dynamic information such as a number of pending requests in a Bottom Navigation or Tab Bar.
 
 ![Badge](https://raw.githubusercontent.com/yamankatby/react-native-material/main/images/badge.png)
 
 ### `<Banner />`
 
-[Try it out](https://rn-material.js.org/docs/components/banner)
+[Try it out](https://www.react-native-material.com/docs/components/banner)
 
 A banner displays a prominent message and related optional actions.
 
@@ -116,7 +108,7 @@ A banner displays a prominent message and related optional actions.
 
 ### `<Button />`
 
-[Try it out](https://rn-material.js.org/docs/components/button)
+[Try it out](https://www.react-native-material.com/docs/components/button)
 
 Buttons allow users to take actions, and make choices, with a single tap.
 
@@ -124,13 +116,13 @@ Buttons allow users to take actions, and make choices, with a single tap.
 
 ### `<Divider />`
 
-[Try it out](https://rn-material.js.org/docs/components/divider)
+[Try it out](https://www.react-native-material.com/docs/components/divider)
 
 A divider is a thin line that groups content in lists and layouts.
 
 ### `<FAB />`
 
-[Try it out](https://rn-material.js.org/docs/components/fab)
+[Try it out](https://www.react-native-material.com/docs/components/floating-action-button)
 
 A floating action button (FAB) represents the primary action of a screen.
 
@@ -138,7 +130,7 @@ A floating action button (FAB) represents the primary action of a screen.
 
 ### `<Surface />`
 
-[Try it out](https://rn-material.js.org/docs/components/surface)
+[Try it out](https://www.react-native-material.com/docs/components/surface)
 
 Material surfaces can be displayed in different shapes. Shapes direct attention, identify components, communicate state,
 and express brand.
@@ -147,7 +139,7 @@ and express brand.
 
 ### `<Typography />`
 
-[Try it out](https://rn-material.js.org/docs/components/typography)
+[Try it out](https://www.react-native-material.com/docs/components/typography)
 
 Use typography to present your design and content as clearly and efficiently as possible.
 
